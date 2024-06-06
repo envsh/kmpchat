@@ -51,7 +51,7 @@ inline fun ChatMessage(isMyMessage: Boolean, message: Message) {
                 }
                 Spacer(Modifier.size(2.dp))
                 Column {
-                    Triangle(true, ChatColors.OTHERS_MESSAGE)
+                    Triangle(true, ChatColorsDark.OTHERS_MESSAGE)
                 }
             }
 
@@ -65,7 +65,7 @@ inline fun ChatMessage(isMyMessage: Boolean, message: Message) {
                             if (!isMyMessage) 0.dp else 10.dp
                         )
                     )
-                        .background(color = if (!isMyMessage) ChatColors.OTHERS_MESSAGE else ChatColors.MY_MESSAGE)
+                        .background(color = if (!isMyMessage) ChatColorsDark.OTHERS_MESSAGE else ChatColorsDark.MY_MESSAGE)
                         .padding(start = 10.dp, top = 5.dp, end = 10.dp, bottom = 5.dp),
                 ) {
                     Column {
@@ -88,7 +88,8 @@ inline fun ChatMessage(isMyMessage: Boolean, message: Message) {
                             style = MaterialTheme.typography.body1.copy(
                                 fontSize = 18.sp,
                                 letterSpacing = 0.sp
-                            )
+                            ),
+                            // color = ChatColorsDark.MY_MESSAGE
                         )
                         Spacer(Modifier.size(4.dp))
                         Row(
@@ -99,7 +100,7 @@ inline fun ChatMessage(isMyMessage: Boolean, message: Message) {
                                 text = timeToString(message.seconds),
                                 textAlign = TextAlign.End,
                                 style = MaterialTheme.typography.subtitle1.copy(fontSize = 10.sp),
-                                color = ChatColors.TIME_TEXT
+                                color = ChatColorsDark.TIME_TEXT
                             )
                         }
                     }
@@ -108,7 +109,7 @@ inline fun ChatMessage(isMyMessage: Boolean, message: Message) {
             }
             if(isMyMessage) {
                 Column {
-                    Triangle(false, ChatColors.MY_MESSAGE)
+                    Triangle(false, ChatColorsDark.MY_MESSAGE)
                 }
             }
         }

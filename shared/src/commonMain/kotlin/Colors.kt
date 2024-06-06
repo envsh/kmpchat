@@ -11,3 +11,15 @@ object ChatColors {
     val OTHERS_MESSAGE = Color.White
     val TIME_TEXT = Color(0xFF979797)
 }
+
+object ChatColorsDark {
+    val GRADIENT_3 = listOf(0xFF000000, 0xFF000000, 0xFF000000)
+    val GRADIENT_2 = listOf(0xFF000000, 0xFF000000)
+    val PRIMARY = 0xFF000000
+    val SURFACE = 0xFF000000
+    val BACKGROUND = 0xFF000000
+    val TOP_GRADIENT = listOf(0xFF000000, 0xFF000000)
+    val MY_MESSAGE = Color(0xFF000000)
+    val OTHERS_MESSAGE = Color.Black
+    val TIME_TEXT = Color(0xFF000000)
+}

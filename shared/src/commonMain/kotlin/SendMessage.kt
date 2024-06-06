@@ -27,10 +27,10 @@ fun SendMessage(sendMessage: (String) -> Unit) {
         modifier = Modifier.fillMaxWidth()
             .background(MaterialTheme.colors.background)
             .padding(10.dp),
-        colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.White),
+        colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.Black),
         value = inputText,
         placeholder = {
-            Text("Type message...")
+            Text("Type message 输入 ...")
         },
         onValueChange = {
             inputText = it
