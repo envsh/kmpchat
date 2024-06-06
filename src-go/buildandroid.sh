@@ -21,4 +21,4 @@ RUSTUP_TOOLCHAIN=$CC
 GOOS=android  GOARCH=arm64  CGO_CFLAGS="-arch arm64" CGO_LDFLAGS="-arch arm64" CGO_ENABLED=1 go build -buildmode=c-shared -o ../jniLibs/libfedimuigo.so
 # GOOS=android GOARCH=arm64 CGO_ENABLED=1 go build -v -x -buildmode=c-shared
 # otool -L ../libfedimuirs.so | grep my_project
-$NDKDIR/bin/llvm-objdump -x ../libfedimuigo.so |grep NEEDED
+$NDKDIR/bin/llvm-objdump -x ../jniLibs/libfedimuigo.so |grep NEEDED

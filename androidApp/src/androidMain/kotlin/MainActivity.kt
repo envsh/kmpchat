@@ -12,4 +12,11 @@ class MainActivity : AppCompatActivity() {
             MainView()
         }
     }
+
+        companion object {
+        init {
+            System.loadLibrary("fedimuigo")
+            // System.loadLibrary("fedimuirs_lib")
+        }
+    }
 }

@@ -22,11 +22,12 @@ bdpc:
 
 bdapk:
 	./gradlew androidApp:build --info
+	ls -lh ./androidApp/build/outputs/apk/debug/androidApp-debug.apk
 
 # android aarch64
 golibarm:
 	cd src-go && ./buildandroid.sh
-	cp -v fedimuigo.so src-tauri/gen/android/app/src/main/jniLibs/arm64-v8a/libfedimuigo.so
+	cp -v jniLibs/libfedimuigo.so androidApp/src/androidMain/jniLibs/arm64-v8a/libfedimuigo.so
 
 golibx86:
 	cd src-go && CGO_ENABLED=1 go build -buildmode=c-shared -o ../jniLibs/libfedimuigo.dylib
