@@ -23,6 +23,8 @@ runpcori:
 
 bdpc:
 	./gradlew desktopApp:build   --info
+	ls -lh desktopApp/build/libs/
+	ls -lh shared/build/libs/
 
 bdapk:
 	./gradlew androidApp:build --info

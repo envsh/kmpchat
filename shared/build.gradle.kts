@@ -51,6 +51,14 @@ kotlin {
             languageSettings {
                 optIn("org.jetbrains.compose.resources.ExperimentalResourceApi")
             }
+            dependencies {
+                implementation("io.github.oshai:kotlin-logging:6.0.9")
+                implementation("org.slf4j:slf4j-api:2.0.13")
+                implementation("org.slf4j:slf4j-simple:2.0.13")
+                // tinylog 不好用，随便写个log，竟然出现方法重zai冲突。。。
+                // implementation("org.tinylog:tinylog-api-kotlin:2.7.0")
+                // implementation("org.tinylog:tinylog-impl:2.7.0")
+            }
         }
         val commonMain by getting {
             dependencies {

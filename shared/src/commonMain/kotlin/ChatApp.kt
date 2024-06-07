@@ -28,7 +28,12 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
+import io.github.oshai.kotlinlogging.KotlinLogging
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+// import org.tinylog.Logger as loger1;
 
+private val logger = KotlinLogging.logger {} 
 val myUser = User("Me", picture = null)
 val friends = listOf(
     User("发Alex", picture = Res.drawable.stock1),
@@ -103,6 +108,8 @@ fun ChatApp(displayTextField: Boolean = true) {
             lastFriend = thisFriend
             lastMessage = thisMessage
             println("hello $thisFriend, $thisMessage")
+            logger.info("hello $thisFriend, $thisMessage")
+            // Logger.info("hello $thisFriend, $thisMessage")
             store.send(
                 Action.SendMessage(
                     message = Message(
