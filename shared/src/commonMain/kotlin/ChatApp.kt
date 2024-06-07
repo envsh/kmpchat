@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.sp
 import chat_mpp.shared.generated.resources.*
 import chat_mpp.shared.generated.resources.Res
 import chat_mpp.shared.generated.resources.background
-// import chat_mpp.shared.generated.resources.backgrounddark
+import chat_mpp.shared.generated.resources.bg123
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
